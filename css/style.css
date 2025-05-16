@@ -481,8 +481,64 @@ th {
     #entry #submit_button {
         width: 90%;
     }
+     /* ▼ 画像がはみ出さないようにする */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    #point figure {
+        float: none;
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    #news dt,
+    #news dd {
+        float: none;
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+
+    #gallery ul li {
+        float: none;
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+
+    table,
+    th,
+    td {
+        display: block;
+        width: 100%;
+    }
+
+    th {
+        text-align: left;
+        width: 100%;
+    }
+
+    #entry #name,
+    #entry #email,
+    #entry #detail {
+        width: 100%;
+    }
+
+    #entry dl dt,
+    #entry dl dd {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #entry dl dd {
+        border-left: none;
+    }
+
+    #entry #submit_button {
+        width: 90%;
+    }
 }
 /* ===== スマホ表示用のCSS終了 ===== */
 
-
-/* contact.html用終了 */
