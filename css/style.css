@@ -1,0 +1,488 @@
+@charset "utf-8";
+
+body {
+    /* ボディの外側の余白 */
+    margin: 0;
+    /* ボディの内側の余白 */
+    padding: 0;
+    color: #333;
+}
+
+/* a（リンク）を装飾 */
+a {
+    /* 色を変える */
+    color: #b7a077;
+}
+
+/* 開いた済みリンクという意味 */
+a:visited {
+    color: #a8a8a8;
+}
+
+/* マウスポインタが乗ったリンクという意味 */
+a:hover {
+    color: #988564;
+    /* 文字を太くする */
+    font-weight: bold;
+    /* 文字の装飾を無くす（リンクの下線が無くなる） */
+    text-decoration: none;
+}
+
+/* 画像リンクに対してマウスポインタが乗った状態 */
+a:hover img {
+    /* 透明度を変える */
+    opacity: 0.7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* 見出しの上の外余白を0にする */
+    margin-top: 0;
+}
+
+p {
+    /* 文字の上の外余白を0にする */
+    margin-top: 0;
+    /* 行間の指定 */
+    line-height: 1.6;
+}
+
+img {
+    /* 行の下端揃え */
+    vertical-align: bottom;
+}
+
+/* divタグ id="main"の中のh1タグを装飾 */
+
+/* divタグ id="main"の中のh2タグを装飾 */
+#main h2 {
+    margin-top: 10px;
+    /* 文字の大きさ */
+    font-size: 22px;
+    /* 上下左右に線（実線）を引く */
+    border: 1px solid #7498a1;
+    /* 内余白 上下　左右*/
+    padding: 11px 22px;
+    /* 線の角に丸みを出す */
+    border-radius: 5px;
+}
+
+/* divタグ id="main"の中のh3タグを装飾 */
+#main h3 {
+    /* 文字の大きさ */
+    font-size: 20px;
+    /* 左に実線引く */
+    border-left: solid 3px #99b8b9;
+    /* 上　、右、下、左に内余白 */
+    padding: 4px 9px 4px 14px;
+
+}
+
+.logo {
+    text-align: center;
+    background-color: #d5e3e7;
+
+}
+
+.logo img {
+    display: inline-block;
+
+    width: 10%;
+
+}
+
+
+
+
+#global_navi {
+    text-align: center;
+    background-color: #7e979e;
+    /* 幅 */
+    width: auto;
+    /* 上で書いたfloatを解除する */
+    clear: both;
+    /* 高さを調整、かぶりをなくす */
+    overflow: hidden;
+    /* 余白 */
+    margin: 0 auto;
+
+}
+
+#global_navi ul {
+
+    /* display: flex; */
+    list-style: none;
+    margin: 0;
+    padding-left: 27%;
+
+}
+
+#global_navi ul li {
+    /* 幅 */
+    width: 200px;
+    /* 左に浮かせる */
+    float: left;
+    /* 右余白 */
+
+    /* 文字の中央揃え */
+    text-align: center;
+
+}
+
+#global_navi ul li a {
+    /* リンクのクリック操作範囲をブロック状にする */
+    display: block;
+    /* 内側余白 */
+    padding: 16px;
+    /* 背景色 */
+    background-color: #4b757c;
+    /* 文字の色 */
+    color: #fff;
+    /* 文字のデコレーション無くす */
+    text-decoration: none;
+
+    /* アニメーションを効果　背景色を２秒かけて変化させる */
+    transition: background-color 1.0s linear;
+}
+
+/* 今いるページのナビを表す */
+#global_navi ul li.current a {
+    /* 背景色 */
+    background-color: #aaf2ff;
+}
+
+/* マウスポインタを乗せたナビ */
+#global_navi ul li a:hover {
+    /* 背景色 */
+    background-color: #7db9c4;
+}
+
+/* divタグ　id="wrapper" */
+#wrapper {
+    /* 幅 */
+    width: 980px;
+    /* 余白　上下、左右 */
+    margin: 0 auto;
+    /* 高さを確保（かぶりなし） */
+    overflow: hidden;
+}
+
+/* div id="main" */
+#main {
+    /* 幅 */
+    width: 730px;
+    /* 左に浮かせる */
+    float: left;
+}
+
+
+
+
+
+
+footer {
+    /* 背景色 */
+    background-color: #4f676b;
+    /* 文字の中央揃え */
+    text-align: center;
+}
+
+footer #footer {
+    /* 背景色 */
+    background-color: #efefef;
+    /* 内余白　上下　左右 */
+    padding: 10px 0;
+}
+
+footer #footer ul {
+    /* 箇条書きスタイル（・）無し */
+    list-style: none;
+    /* 外余白 */
+    margin: 0;
+    /* 内余白 */
+    padding: 0;
+}
+
+footer #footer li {
+    /* インライン（ブロックレベル） */
+    display: inline;
+    /* 左に実線 */
+    border-left: solid 1px #a5a5a5;
+    /* 左に外余白 */
+    margin-left: 8px;
+    /* 左に内余白 */
+    padding-left: 8px;
+    /* 文字の大きさ　小さく */
+    font-size: smaller;
+}
+
+/* フッターのナビの一番最後 */
+footer #footer li:last-child {
+    /* 右に実線 */
+    border-right: solid 1px #aaa;
+    /* 内余白 */
+    padding: 0 8px;
+}
+
+footer small {
+    /* ブロック */
+    display: block;
+    /* 内余白 */
+    padding: 8px 0;
+    /* 文字の色 */
+    color: #fff;
+}
+
+/* パンくずリスト */
+#breadcrumb {
+    /* 文字の大きさ　小さく */
+    font-size: smaller;
+}
+
+#breadcrumb ol {
+    /* 箇条書きのスタイルをなくす */
+    list-style: none;
+    /* 外余白 */
+    margin: 0;
+    /* 内余白 */
+    padding: 0;
+}
+
+#breadcrumb ol li {
+    /* 横並びにする */
+    display: inline;
+}
+
+/* パンくずリストの一個ずつの後 */
+#breadcrumb ol li::after {
+    /* >を付ける */
+    content: ">";
+    /* 左内余白 */
+    padding-left: 7px;
+}
+
+/* パンくずリストの最後の>を消す */
+/* last-child 箇条書きの最期を指定 */
+#breadcrumb ol li:last-child::after {
+    /* 文字をなくす */
+    content: none;
+}
+
+/* index.html用 */
+#main_visual {
+    /* 幅 */
+    width: 980px;
+    /* 高さ */
+    height: 440px;
+    /* 外余白　上、左右、下 */
+    margin: 0 auto 48px;
+}
+
+#point section {
+    /* 外余白 */
+    margin-bottom: 10px;
+    /* 高さ調整、かぶりをなくす */
+    overflow: hidden;
+}
+
+#point figure {
+    /* 右に浮かせる */
+    float: right;
+    /* 外余白　上、右、下、左 */
+    margin: 0 0 0 16px;
+}
+
+#point figcaption {
+    /* 文字の大きさ */
+    font-size: 12px;
+    /* 文字の色 */
+    color: #9eabbb;
+    /* 文字の配置　中央揃え */
+    text-align: center;
+}
+
+/* 日付 */
+#news dt {
+    /* 幅 */
+    width: 8em;
+    /* 左に浮かせる */
+    float: left;
+    /* 外下余白 */
+    margin-bottom: 10px;
+    /* 浮かせるのをなくす */
+    clear: both;
+}
+
+/* 内容 */
+#news dd {
+    /* 外左余白 */
+    margin-left: 8em;
+    /* 外下余白 */
+    margin-bottom: 10px;
+}
+
+/* index.html用終了 */
+
+/* course.html用 */
+table {
+    /* 幅 */
+    width: 100%;
+    /* セル同士の線が重なるように作成 */
+    border-collapse: collapse;
+    /* 外下余白 */
+    margin-bottom: 16px;
+}
+
+th,
+td {
+    border: 1px solid #c7c7c7;
+    padding: 8px;
+}
+
+th {
+    /* 背景色 */
+    background-color: #f1ede4;
+    /* 左揃え */
+    text-align: left;
+    /* 幅 */
+    width: 5em;
+}
+
+/* course.html用終了 */
+
+/* gallery.html用 */
+#gallery ul {
+    padding: 0;
+}
+
+#gallery ul li {
+    /* 幅 */
+    width: 220px;
+    /* 外余白 */
+    margin: 0 30px 30px 0;
+    /* 内余白 */
+    padding: 10px 0;
+    /* 上下左右に実線を引く */
+    border: solid 1px #ccc;
+    /* 文字の中央揃え */
+    text-align: center;
+    /* 文字の色 */
+    color: #7eb6c0;
+    /* 文字を太くする */
+    font-weight: bold;
+    /* 影を付ける */
+    box-shadow: 2px 2px 3px rgb(63, 83, 99);
+    /* 左に浮かせる */
+    float: left;
+}
+
+/* ３つ（３の倍数番目を指定）ずつに並べる指定 */
+#gallery ul li:nth-child(3n) {
+    margin-right: 0;
+}
+
+/* gallery.html用終了 */
+
+/* contact.html用 */
+
+
+
+/* ===== スマホ表示用のCSS開始 ===== */
+@media screen and (max-width: 480px) {
+
+    body {
+        padding: 10px;
+    }
+
+    #wrapper,
+    #main_visual {
+        width: 100%;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    #main {
+        width: 100%;
+        float: none;
+    }
+
+    #global_navi ul {
+        padding-left: 0;
+        display: block;
+    }
+
+    #global_navi ul li {
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+
+    #global_navi ul li a {
+        padding: 12px;
+    }
+
+    .logo img {
+        width: 60%;
+    }
+
+    #point figure {
+        float: none;
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    #news dt,
+    #news dd {
+        float: none;
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+
+    #gallery ul li {
+        float: none;
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+
+    table,
+    th,
+    td {
+        display: block;
+        width: 100%;
+    }
+
+    th {
+        text-align: left;
+        width: 100%;
+    }
+
+    #entry #name,
+    #entry #email,
+    #entry #detail {
+        width: 100%;
+    }
+
+    #entry dl dt,
+    #entry dl dd {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #entry dl dd {
+        border-left: none;
+    }
+
+    #entry #submit_button {
+        width: 90%;
+    }
+}
+/* ===== スマホ表示用のCSS終了 ===== */
+
+
+/* contact.html用終了 */
